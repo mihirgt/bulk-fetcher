@@ -13,7 +13,6 @@ mutation testMutation($limit: Int!, $start_time: DateTime!, $end_time: DateTime!
             startTime:$start_time
             endTime:$end_time
           }
-          offset: 0
           filterBy: [
             {
               keyExpression: { key: "environment" }
@@ -130,7 +129,7 @@ mutation ct($start_time: DateTime!, $end_time: DateTime!) {
         {
           name: "count"
           scope: "API_TRACE"
-          limit: 1000
+          limit: 1
           between: {
             startTime: $start_time
             endTime: $end_time
