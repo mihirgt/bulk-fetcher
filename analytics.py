@@ -18,7 +18,7 @@ mutation testMutation($limit: Int!, $start_time: DateTime!, $end_time: DateTime!
             {
               keyExpression: { key: "environment" }
               operator: EQUALS
-              value: "fintech-app"
+              value: "nec"
               type: ATTRIBUTE
             }
           ]
@@ -135,6 +135,15 @@ mutation ct($start_time: DateTime!, $end_time: DateTime!) {
             startTime: $start_time
             endTime: $end_time
           }
+          filterBy: [
+            {
+              keyExpression: { key: "environment" }
+              operator: EQUALS
+              value: "nec"
+              type: ATTRIBUTE
+            }
+          ]
+
           orderBy: [
             {
               aggregation: COUNT
